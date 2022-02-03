@@ -9,17 +9,19 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 
-	var sueldo
-	var resultado
-	var aumento
+	var sueldo;
+	var resultado;
+	var aumento;
 
-		sueldo = document.getElementById('txtIdSueldo').value;
+	sueldo = document.getElementById('txtIdSueldo').value;
+	sueldo= parseInt(sueldo);	
+	
+	aumento = sueldo * 0.1;
+	aumento = parseFloat(aumento);
 
-		aumento = sueldo * 10 / 100;
+	resultado = sueldo + aumento;
 
-		resultado = parseInt(sueldo) + aumento;
-
-		document.getElementById('txtIdResultado').value = resultado;
+	document.getElementById('txtIdResultado').value = resultado;
 
 	
 

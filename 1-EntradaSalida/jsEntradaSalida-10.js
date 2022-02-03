@@ -9,17 +9,20 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	
-	var importe
-	var resultado
-	var descuento
+	var importe;
+	var resultado;
+	var descuento;
 
-		importe = document.getElementById('txtIdImporte').value;
 
-		descuento = importe * 25 / 100;
+	importe = document.getElementById('txtIdImporte').value;
+	importe = parseInt(importe);
 
-		resultado = parseInt(importe) - descuento;
+	descuento = 0.75;
+	descuento = parseFloat(descuento);
 
-		document.getElementById('txtIdResultado').value = resultado;
+	resultado = importe * descuento;
+
+	document.getElementById('txtIdResultado').value = resultado;
 
 
 }	

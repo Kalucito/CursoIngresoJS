@@ -9,56 +9,64 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	var uno 
-	var dos 
-	var suma 
+	var uno;
+	var dos;
+	var suma; 
 
 	uno = document.getElementById('txtIdNumeroUno').value;
+	uno = parseInt(uno);
 	dos = document.getElementById('txtIdNumeroDos').value;
+	dos = parseInt(dos);
 
-	suma = parseInt(uno) + parseInt(dos);
+	suma = uno + dos;
 
 	alert("la suma es " + suma);
 }
 
 function restar()
 {
-	var uno 
-	var dos 
-	var resta 
+	var uno;
+	var dos;
+	var resta;
 
 	uno = document.getElementById('txtIdNumeroUno').value;
+	uno = parseInt(uno);
 	dos = document.getElementById('txtIdNumeroDos').value;
+	dos = parseInt(dos);
 
-	resta = parseInt(uno) - parseInt(dos);
+	resta = uno - dos;
 
 	alert("la resta es " + resta);
 }
 
 function multiplicar()
 { 
-	var uno 
-	var dos 
-	var multiplicar 	
+	var uno;
+	var dos;
+	var multiplicar;	
 
 	uno = document.getElementById('txtIdNumeroUno').value;
+	uno = parseInt(uno);
 	dos = document.getElementById('txtIdNumeroDos').value;
+	dos = parseInt(dos);
 
-	multiplicar = parseInt(uno) * parseInt(dos);
+	multiplicar = uno * dos;
 
 	alert("la multiplicación es " + multiplicar); 
 }
 
 function dividir()
 {
-	var uno 
-	var dos
-	var dividir
+	var uno;
+	var dos;
+	var dividir;
 
 	uno = document.getElementById('txtIdNumeroUno').value;
+	uno = parseInt(uno);
 	dos = document.getElementById('txtIdNumeroDos').value;
+	dos = parseInt(dos);
 
-	dividir = parseInt(uno) / parseInt(dos);
+	dividir = uno / dos;
 
 	alert("la división es " + dividir);
 }
