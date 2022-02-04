@@ -11,4 +11,97 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
  	
+    var precioLamparas;
+    var cantidadDeLamparas;
+    var marca;
+    var suma;
+    var descuento;
+    var precioConDescuento;
+
+    precioLamparas = 35;
+
+    cantidadDeLamparas = document.getElementById("txtIdCantidad").value;
+    cantidadDeLamparas = parseInt(cantidadDeLamparas);
+
+    suma = precioLamparas * cantidadDeLamparas;
+    marca = document.getElementById("Marca").value;
+
+   
+    if (cantidadDeLamparas >= 6) {
+
+        precioConDescuento = suma * 0.5;
+    }
+    else {
+
+        precioConDescuento = suma;
+    }
+
+   
+
+    if (cantidadDeLamparas == 5 && marca == "ArgentinaLuz") {
+
+        precioConDescuento = precioConDescuento * 0.6;
+    }
+    else if (cantidadDeLamparas == 5) {
+
+        precioConDescuento = precioConDescuento * 0.7;
+    }
+    else {
+
+        precioConDescuento = precioConDescuento;
+    }
+
+
+
+    if (cantidadDeLamparas == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")) {
+
+        precioConDescuento = precioConDescuento * 0.75;
+    }
+
+    else if (cantidadDeLamparas ==4) {
+
+        precioConDescuento = precioConDescuento * 0.8;
+    }
+    else {
+
+        precioConDescuento = precioConDescuento;
+    }
+
+
+
+    if (cantidadDeLamparas == 3 && marca == "ArgentinaLuz") {
+
+        precioConDescuento = precioConDescuento * 0.85;
+    }
+
+    else if (cantidadDeLamparas == 3 && marca == "FelipeLamparas") {
+
+        precioConDescuento = precioConDescuento * 0.9;
+    }
+
+    else if (cantidadDeLamparas == 3) {
+
+        precioConDescuento = precioConDescuento * 0.95;
+    }
+    else {
+
+        precioConDescuento = precioConDescuento;
+    }
+
+
+
+    if (precioConDescuento > 120) {
+
+        precioConDescuento = precioConDescuento * 1.10;
+    }
+
+    else {
+
+        precioConDescuento = precioConDescuento;
+    }
+
+
+
+    document.getElementById("txtIdprecioDescuento").value = precioConDescuento; 
+
 }
