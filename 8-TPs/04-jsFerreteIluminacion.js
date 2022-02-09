@@ -184,7 +184,8 @@ function CalcularPrecio ()
     precioBruto = precioLamparas * cantidadDeLamparas;
 
     
-
+//USO INNECESARIO DE CODIGO, MUCHAS REPETICIONES, TRATAR DE ANIDAR, USAR COMO EJEMPLO
+//EL EJERCIOCIO DE IF/SWITCH 6.
     if (cantidadDeLamparas >= 6) {
 
         descuentoCalculado = precioBruto * descuentoSeis / 100;
