@@ -136,7 +136,7 @@ function CalcularPrecio ()
 
 
 
-*/
+
 
 
     document.getElementById("txtIdprecioDescuento").value = precioConDescuento; 
@@ -160,7 +160,6 @@ function CalcularPrecio ()
     var ingresosBrutos;
     var ingresosBrutosCalculado;
     var precioFinal;
-
 
     precioLamparas = 35;
 
@@ -303,8 +302,89 @@ function CalcularPrecio ()
 
 
 
-    }
-
 */
 
+    var precioLamparas;
+    var cantidadDeLamparas;
+    var marca;
+    var descuento;
+    var descuentoCalculado;
+    var precioBruto;
+    var precioFinal;
+
+    precioLamparas = 35;
+
+    cantidadDeLamparas = document.getElementById("txtIdCantidad").value;
+    cantidadDeLamparas = parseInt(cantidadDeLamparas);
+
+    marca = document.getElementById("Marca").value;
+
+    if (cantidadDeLamparas >= 6) 
+    {
+        descuento = 50;
     }
+    else
+    {
+        if (cantidadDeLamparas == 5) 
+        {
+            if (marca == "ArgentinaLuz") 
+            {
+                descuento = 40;
+            }
+            else 
+            {
+                descuento = 30;
+            }
+        }
+        else 
+        {
+            if (cantidadDeLamparas == 4) 
+            {
+                if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") 
+                {
+                    descuento = 25;
+                }
+                else 
+                {
+                    descuento = 20;
+                }
+            }
+            else 
+            {
+                if (cantidadDeLamparas == 3) 
+                {
+                    if (marca == "ArgentinaLuz") 
+                    {
+                        descuento = 15;
+                    }
+                    else
+                    {
+                        if (marca == "FelipeLamparas") 
+                        {
+                            descuento = 10;
+                        }
+                        else 
+                        {
+                            descuento = 5;
+                        }
+                    }
+                }
+                else
+                {
+                    descuento = 0;
+                }
+            }
+        }
+    }
+
+    precioBruto = precioLamparas * cantidadDeLamparas;
+
+    descuentoCalculado = precioBruto * descuento / 100;
+
+    precioFinal = precioBruto - descuentoCalculado;
+
+    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+
+
+
+ }
