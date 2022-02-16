@@ -1,8 +1,30 @@
+/*
+Alumno: Lucas De Nardo
+Div G
+EJ 5
+*/
 function mostrar()
 {
-	//tomo la hora
-	var horaDelDia =txtIdHora.value;
-	alert(horaDelDia);
+	var horaDelDia;
+	var mensaje;
+
+	horaDelDia = document.getElementById("txtIdHora").value;
+
+	switch(horaDelDia)
+	{
+		case 7:
+		case 8:
+		case 9:
+		case 10: 
+		case 11:
+			mensaje = "Es de mañana.";
+			break;
+		default:
+			mensaje = "No es de mañana.";
+			break;
+	}
+
+	alert(mensaje);
 	
 	
 

@@ -16,12 +16,21 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	alert(numeroSecreto);
+	
+	
 
 }
 
 function verificar()
 {
+	 
+	var score;
 	
+	score = 0;
+
+	document.getElementById("txtIdIntentos").value = ++score;
+
+
+	alert(score);
 	
 }
