@@ -1,3 +1,8 @@
+/*
+Alumno: Lucas De Nardo
+Div G
+EJ 7
+*/
 function mostrar()
 {
 	var destino;
@@ -10,8 +15,11 @@ function mostrar()
 		case "Cataratas":
 			mensaje = "El destino está al Norte.";
 			break;
-		case "Mar Del Plata":
+		case "Mar del plata":
 			mensaje = "EL destino está al Este";
+			break;
+		case "Bariloche":
+			mensaje = "El destino está al Oeste";
 			break;
 		default:
 			mensaje = "El destino está al Sur";

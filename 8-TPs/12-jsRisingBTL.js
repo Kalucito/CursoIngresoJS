@@ -9,11 +9,15 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 	//definicion de variables
- 	var edadIngresada;
- 	var sexoIngresado;
- 	var estadoCivilIngresado;
+    var sexo;
+
+    sexo = prompt("Ingrese sexo.");
+
+    while (sexo != "F" && sexo != "M")
+    {
+        sexo = prompt("Ingrese sexo.");
+    }
 
 
-
+    document.getElementById("txtIdSexo").value = sexo;
 }

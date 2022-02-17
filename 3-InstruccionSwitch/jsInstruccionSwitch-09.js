@@ -8,11 +8,11 @@ function mostrar()
 	var destinoIngresado;
 	var estacionIngresada;
 	var mensaje;
-	var precio;
+	var tarifa;
 	var modificador;
-	var precioFinal;
+	var precioFinal;	
 
-	precio = 15000;
+	tarifa = 15000;
 	estacionIngresada = document.getElementById("txtIdEstacion").value;
 	destinoIngresado = document.getElementById("txtIdDestino").value;
 
@@ -31,7 +31,7 @@ function mostrar()
 					modificador = 0.9;
 					break;
 			}
-			break;
+		break;
 		case "Verano":
 			switch(destinoIngresado)
 			{
@@ -45,21 +45,21 @@ function mostrar()
 					modificador = 1.1;
 					break;
 			}
-			break;
-	default:
-		switch(destinoIngresado)
-		{
-			case "Cordoba":
-				modificador = 1;
-				break;
-			default:
-				modificador = 1.1;
-				break;
-		}	
 		break;
-	}	
+		default:
+			switch(destinoIngresado)
+			{
+				case "Cordoba":
+					modificador = 1;
+					break;
+				default:
+					modificador = 1.1;
+					break;
+			}	
+		break;
+	}	//Fin del Switch.
 
-	precioFinal = precio * modificador;
+	precioFinal = tarifa * modificador;
 	alert("$" + precioFinal);
 
 }//FIN DE LA FUNCIÓN
