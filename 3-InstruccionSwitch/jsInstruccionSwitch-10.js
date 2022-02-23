@@ -46,7 +46,7 @@ function mostrar()
 			switch(destinoIngresado)
 			{
 				case "Bariloche":
-					mensaje = "No se viaja.";
+					mensaje = "No se viaja.";|
 					break;
 				default:
 					mensaje = "Se viaja.";

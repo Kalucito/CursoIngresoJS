@@ -1,4 +1,7 @@
 /*
+Alumno: Lucas De Nardo
+Div G
+EJ 3
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {

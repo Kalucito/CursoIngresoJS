@@ -1,3 +1,8 @@
+/*
+Alumno: Lucas De Nardo
+Div G
+EJ 8
+*/
 function mostrar()
 {
 	var destino;
